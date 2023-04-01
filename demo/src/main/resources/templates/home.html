@@ -1,44 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>RAJ ROŚLIN</title>
-  <meta name="description" content="STRONA O OGRODNICTWIE" />
-  <link rel="stylesheet" href="style2.css" type="text/css" />
-
-    <meta name="keywords" content="słowa kluczowe">
-
-  
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/firste.css">
 </head>
-<body>
-<dif>
+<body id="home">
+<header class="header">
 
 
-  <label for="cars"><img src="img_1.png" alt="buttonpng" border="0" width="13" height="13"></label>
-  <select id="cars">
-    <option value="POL">POL</option>
-    <option value="ENG">ENG</option>
-  </select>
-    <input type="text" placeholder="Search.." name="search">
-    <button type="submit"><img src="img.png" alt="buttonpng" border="0" width="13" height="13"></button>
+  <div class="leftt">
+    <label for="language-select"><img src="img_1.png" alt="buttonpng" width="13" height="13"></label>
+    <select id="language-select">
+      <option value="POL">POL</option>
+      <option value="ENG">ENG</option>
+    </select>
+    <form class="search-form">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><img src="img.png" alt="buttonpng" width="13" height="13"></button>
+    </form>
+  </div>
+
+  <div class="RAJ container">
     <button type="submit">
-    <img src="RAJROŚLIN.png" alt="buttonpng" border="0" width="200" height="60"/>
+      <img src="RAJROŚLIN.png" alt="buttonpng" width="200" height="60">
     </button>
+    <nav>
+      <ul class="menu">
+        <li><a class="menubutton" href="#">Nasiona</a></li>
+        <li><a class="menubutton" href="#">Sadzonki</a></li>
+        <li><a class="menubutton" href="#">Akcesoria</a></li>
+        <li><a class="menubutton" href="#">Nawozy</a></li>
+        <li><a class="menubutton" href="#">O nas</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="log">
     <a href="#">Zaloguj się!</a>
-    <button type="submit"><img src="wozek.png" alt="buttonpng" border="0" width="13" height="13"></button>
+    <button type="submit"><img src="wozek.png" alt="buttonpng" width="13" height="13"></button>
     <a href="#">0,00zł</a>
-    </br>
-    <a href="#">Nasiona</a>
-    <a href="#">Sadzonki</a>
-    <a href="#">Akcesoria</a>
-    <a href="#">Nawozy</a>
-    <a href="#">O nas</a>
-</dif>
+  </div>
 
-<did>
+</header>
 
-</did>
+<main >
+  <div class="panel">
+    <img id="image" src="img/pierwszezdj.png" alt="Pierwsze zdjęcie">
+    <button id="next-btn">&gt;</button>
+  </div>
+</main>
+
+<div class="hhh">
+  <h1>Wiosenne HITY</h1>
+</div>
+
+
+<div class="produkt">
+  <section class="flexbox">
+    <div class="box">
+      <a id="jeden1" href="../pages/produkt.html" onclick="storeItemSelected(this.id)">
+        <div>
+          <img src="produkty/zhen-hu-SauU_zQ5ZKA-unsplash%201.png" />
+        </div>
+      </a>
+      <p>Mak wschodni</p>
+      <p><b>4,15/szt.</b></p>
+      <p>do koszyka</p>
+    </div>
+
+    <div class="box">
+      <a id="dwa2" href="../pages/produkt.html" onclick="storeItemSelected(this.id)">
+        <div>
+          <img src="produkty/linh-le-Ebwp2-6BG8E-unsplash%201.png" />
+        </div>
+      </a>
+      <p>Doniczki kwiatowe</p>
+      <p><b>5,49zł/szt.</b></p>
+      <p>do koszyka</p>
+    </div>
+
+    <div class="box">
+      <a id="trzy3" href="../pages/produkt.html" onclick="storeItemSelected(this.id)">
+        <div id="trzy3">
+          <img src="produkty/michael-c-ncK1abCfC90-unsplash%201.png" />
+        </div>
+      </a>
+      <p>Marchew Berlikum</p>
+      <p><b>5,29 szt.</b></p>
+      <p>do koszyka</p>
+    </div>
+    <div class="box">
+      <a id="cztery4" href="../pages/produkt.html" onclick="storeItemSelected(this.id)" >
+        <div id="cztery4">
+          <img src="produkty/roxana-kaboli-W0L2LbXoEQI-unsplash%201.png" />
+        </div>
+      </a>
+      <p>Truskawka Polka</p>
+      <p><b>4,50 zł</b></p>
+      <p>do koszyka</p>
+    </div>
+  </section>
+</div>
 
 </body>
 </html>
