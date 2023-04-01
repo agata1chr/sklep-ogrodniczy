@@ -1,0 +1,95 @@
+body,
+ul,
+li,
+p {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 1.2rem;
+  font-family: Arial;
+}
+
+.header {
+  background: #E4EBE4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.leftt {
+   display: flex;
+   flex-wrap: nowrap; /* zapobiega przewijaniu w poziomie */
+   justify-content: center; /* wyśrodkowanie w poziomie */
+   align-items: center;
+   margin-top: 20px; /* odstęp od zdjęcia */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: nowrap; /* zapobiega przewijaniu w poziomie */
+  justify-content: center; /* wyśrodkowanie w poziomie */
+  align-items: center;
+  margin-top: 20px; /* odstęp od zdjęcia */
+}
+
+.menu li + li {
+  margin-left: 10px; /* dodaj przerwę po lewej stronie każdego przycisku poza pierwszym */
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* ustaw pozycję względem elementu nadrzędnego */
+  width: 100%;
+}
+
+#next-btn {
+  position: absolute;
+  right: 230px;
+}
+
+.hhh {
+  display: flex;
+  justify-content: center; /* wyśrodkowanie w poziomie */
+  align-items: center;
+}
+
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* wyśrodkowanie w poziomie */
+  align-items: center;
+  margin: auto;
+}
+
+.flexbox > .box {
+  flex: 1 1 200px;
+  margin: 10px;
+  flex-grow: 0;
+}
+
+.flexbox > div > p {
+  margin-left: 30px;
+
+}
+.box {
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.box:hover {
+  transform: scale(1.25, 1.25);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
