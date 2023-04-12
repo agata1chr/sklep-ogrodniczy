@@ -22,9 +22,11 @@ p {
    flex-wrap: nowrap; /* zapobiega przewijaniu w poziomie */
    justify-content: center; /* wyśrodkowanie w poziomie */
    align-items: center;
-   margin-top: 20px; /* odstęp od zdjęcia */
-}
 
+}
+.search-form {
+
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -52,6 +54,10 @@ p {
   position: relative; /* ustaw pozycję względem elementu nadrzędnego */
   width: 100%;
 }
+.RAJcontainer {
+  margin: 0 auto; /* Centruje obrazek w poziomie */
+  }
+
 
 #next-btn {
   position: absolute;
@@ -153,4 +159,40 @@ p {
   border: none;
   border-radius: 5px;
 }
+.f-bg{
+    width: 100%;
+    background-color: #F0F0F0;
 
+}
+.footer{
+
+    width: 80%;
+    margin: 5em auto 0;
+}
+
+
+.card-footer{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ul{
+    padding: 0;
+}
+.card-footer ul li{
+    margin: 0.5em;
+    color: #6E6E6E;
+    list-style: none;
+}
+.card-footer ul li.title-list{
+    text-transform: uppercase;
+    color: black;
+    font-weight: 700;
+}
+
+.by-name{
+    padding:1em 0 2em;
+    border-top: 1px solid black;
+    margin: 0;
+}
