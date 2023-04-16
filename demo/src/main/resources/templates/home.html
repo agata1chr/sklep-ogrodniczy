@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" th:href="@{css/first.css}"/>
+</head>
+<body id="home">
+<header class="header">
+  <div class="leftt">
+    <label for="language-select"><img th:src="@{img/img_1.png}" alt="buttonpng" width="13" height="13"></label>
+    <select id="language-select">
+      <option value="POL">POL</option>
+      <option value="ENG">ENG</option>
+    </select>
+  </div><div>
+    <form class="search-form">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><img th:src="@{img/img.png}" alt="buttonpng" width="13" height="13"></button>
+    </form>
+  </div>
+
+  <div class="RAJ container">
+
+      <a th:href="@{/home}"> <img th:src="@{img/RAJROŚLIN.png}" th:href="@{/home}" alt="RAJ ROŚLIN" width="230" height="60"></a>
+
+
+    <nav>
+      <ul class="menu">
+        <li><a class="menubutton" th:href="@{/category}">Nasiona</a></li>
+        <li><a class="menubutton" th:href="@{/category}">Sadzonki</a></li>
+        <li><a class="menubutton" th:href="@{/category}">Akcesoria</a></li>
+        <li><a class="menubutton" th:href="@{/category}">Nawozy</a></li>
+        <li><a class="menubutton" th:href="@{/category}">O nas</a></li>
+      </ul>
+    </nav>
+  </div>
+  <a th:href="@{/login}" id="login">Zaloguj się!</a>
+  <div class="log">
+
+    <a th:href="@{/basket}"> <img th:src="@{img/wozek.png}" th:href="@{/basket}" alt="buttonpng" width="15" height="15"></a>
+    <a th:href="@{/basket}">0,00zł</a>
+  </div>
+
+</header>
+
+<main >
+  <div class="panel">
+    <img id="image" th:src="@{img/pierwszezdj.png}" alt="Pierwsze zdjęcie">
+    <button id="next-btn">&gt;</button>
+  </div>
+</main>
+
+<br>
+<div class="hhh">
+  <h1>Wiosenne HITY</h1>
+</div>
+
+
+<div class="produkt">
+  <section class="flexbox">
+    <div class="box">
+      <a id="jeden1" href="pages/produkt.html" onclick="storeItemSelected(this.id)">
+        <div>
+          <img th:src="@{produkty/zhen-hu-SauU_zQ5ZKA-unsplash%201.png}" />
+        </div>
+      </a>
+      <p>Mak wschodni</p>
+      <p><b>4,15/szt.</b></p>
+      <p>do koszyka</p>
+    </div>
+
+    <div class="box">
+      <a id="dwa2" href="pages/produkt.html" onclick="storeItemSelected(this.id)">
+        <div>
+          <img th:src="@{produkty/linh-le-Ebwp2-6BG8E-unsplash%201.png}" />
+        </div>
+      </a>
+      <p>Doniczki kwiatowe</p>
+      <p><b>5,49zł/szt.</b></p>
+      <p>do koszyka</p>
+    </div>
+
+    <div class="box">
+      <a id="trzy3" href="pages/produkt.html" onclick="storeItemSelected(this.id)">
+        <div >
+          <img th:src="@{produkty/michael-c-ncK1abCfC90-unsplash%201.png}" />
+        </div>
+      </a>
+      <p>Marchew Berlikum</p>
+      <p><b>5,29 szt.</b></p>
+      <p>do koszyka</p>
+    </div>
+    <div class="box">
+      <a id="cztery4" href="pages/produkt.html" onclick="storeItemSelected(this.id)" >
+        <div>
+          <img th:src="@{produkty/roxana-kaboli-W0L2LbXoEQI-unsplash%201.png}" />
+        </div>
+      </a>
+      <p>Truskawka Polka</p>
+      <p><b>4,50 zł</b></p>
+      <p>do koszyka</p>
+    </div>
+  </section>
+</div>
+<br>
+<div class="hhh">
+  <h1>Polecane domowe rośliny</h1>
+</div>
+
+
+<article>
+  <div class="side-container">
+    <div class="text">
+
+      <h1>Światło</h1>
+      <p>Ta roślina bardzo dobrze radzi sobie w słabo <br>
+        oświetlonych pomieszczeniach, dzięki czemu można ją <br>
+        umieścić w niemal każdym miejscu w domu. Jest to <br>
+        roślina tolerancyjna, co oznacza, że może przetrwać w <br>
+        warunkach oświetlenia od słabego do jasnego, ale bez <br>
+        bezpośredniego nasłonecznienia.</p>
+      <h1>Temperatura</h1>
+      <p>Sansewieria to roślina, która dobrze rośnie w <br>
+        temperaturze pokojowej. Najlepiej rozwija się w <br>
+        temperaturze między 15 a 27 stopni Celsjusza, co <br>
+        oznacza, że można ją uprawiać w większości klimatów <br>
+        domowych bez większych trudności.</p>
+      <h1>Podlewanie</h1>
+      <p>Nie wymaga częstego podlewania, co jest jej kolejnym <br>
+        atutem. Wystarczy podlać ją raz na kilka tygodni, <br>
+        a nawet co kilka miesięcy. Ważne jest, aby nie przelawać <br>
+        sansewierii, ponieważ może to doprowadzić do zgnicia <br>
+        jej korzeni. Warto zatem zawsze sprawdzać wilgotność <br>
+        gleby przed podlaniem rośliny.</p>
+
+    </div>
+    <article class="article">
+      <img th:src="@{img/roślina.png}" alt="to jest ładne zdjęcie">
+    </article>
+  </div>
+</article>
+
+
+<section class="stopka">
+  <div>
+    <h1>Odbierz -10% Rabatu</h1>
+  </div>
+  <div>
+    <p><b>Dołącz do newsletter i skorzystaj z rabatu na pierwsze zakupy oraz zniżek dla stałych klientów.</b></p>
+  </div>
+  <form>
+    <input type="text" name="search" placeholder="Wpisz tutaj swoje zapytanie..." class="search-bar">
+    <button type="submit" class="search-btn">Szukaj</button>
+  </form>
+  <form action="lll">
+    <br>
+    <input type="checkbox" name="nazwa" value="wartość">
+    <k>Dołącz do newsletter i skorzystaj z rabatu na pierwsze zakupy oraz zniżek dla stałych klientów.</k>
+  </form>
+  <br>
+</section>
+
+<br>
+<br>
+<header class="header">
+  <footer class="footer">
+    <div class="card-footer">
+      <ul>
+        <li>
+          <img th:src="@{img/RAJROŚLIN.png}" alt="Logo" width="250" height="100"  >
+        </li>
+        <li>
+          <p>
+            O nas <br>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li class="title-list">Informacje</li>
+        <li>Strona główna</li>
+        <li>Nasiona</li>
+        <li>Sadzonki</li>
+        <li>Akcesoria</li>
+        <li>Nawozy</li>
+      </ul>
+      <ul>
+        <li class="title-list">Moje Konto</li>
+        <li>Zaloguj</li>
+        <li>Założ konto</li>
+
+      </ul>
+      <ul class="shops">
+        <li class="title-list ">Kontakt</li>
+        <li>hello@rajroslin.pl</li>
+        <li>Ul.pokoju243  <br>
+        31-567 Kraków</li>
+        <li>+48 22 567 88 76 39</li>
+        <li>Odwiedź nas:</li>
+      </ul>
+    </div>
+
+    <p class="by-name">
+      &copy; Prawa autorskie 2023 Raj Natury Wszelkie prawa zastrzeżone.
+    </p>
+  </footer>
+</header>
+
+</body>
+</html>
