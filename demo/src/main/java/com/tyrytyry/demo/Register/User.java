@@ -1,4 +1,4 @@
-package com.tyrytyry.demo.web;
+package com.tyrytyry.demo.Register;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -20,5 +20,7 @@ public class User {
     private String username;
     @NonNull
     private String password;
+
+
 
 }
