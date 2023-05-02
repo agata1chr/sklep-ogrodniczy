@@ -22,6 +22,4 @@ public class pageController {
 
         return "home";
     }
-
-
 }
