@@ -5,6 +5,22 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <link rel="stylesheet" th:href="@{css/first.css}"/>
+  <script th:src="@{/js/home.js}" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <div th:each="product : ${products}">
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        $(document).ready(function() {
+            addProductBoxx(
+                /*[[${product.id}]]*/,
+                /*[[${product.name}]]*/,
+                /*[[${product.description}]]*/,
+                /*[[${product.imageUrl}]]*/
+            );
+        });
+        /*]]>*/
+    </script>
+  </div>
 </head>
 <body id="home">
 <header class="header">
@@ -48,9 +64,11 @@
 <main >
   <div class="panel" id="image-container">
     <img id="image" th:src="@{img/pierwszezdj.png}" alt="Pierwsze zdjęcie">
+    <p id="image-text">Tekst do pierwszego zdjęcia</p>
     <button id="next-btn">&gt;</button>
   </div>
 </main>
+
 
 <br>
 <div class="hhh">
@@ -59,49 +77,9 @@
 
 
 <div class="produkt">
-  <section class="flexbox">
-    <div class="box">
-      <a id="jeden1" href="pages/produkt.html" onclick="storeItemSelected(this.id)">
-        <div>
-          <img th:src="@{produkty/zhen-hu-SauU_zQ5ZKA-unsplash%201.png}" />
-        </div>
-      </a>
-      <p>Mak wschodni</p>
-      <p><b>4,15/szt.</b></p>
-      <p>do koszyka</p>
-    </div>
+  <section id="someElementId" class="flexbox">
 
-    <div class="box">
-      <a id="dwa2" href="pages/produkt.html" onclick="storeItemSelected(this.id)">
-        <div>
-          <img th:src="@{produkty/linh-le-Ebwp2-6BG8E-unsplash%201.png}" />
-        </div>
-      </a>
-      <p>Doniczki kwiatowe</p>
-      <p><b>5,49zł/szt.</b></p>
-      <p>do koszyka</p>
-    </div>
 
-    <div class="box">
-      <a id="trzy3" href="pages/produkt.html" onclick="storeItemSelected(this.id)">
-        <div >
-          <img th:src="@{produkty/michael-c-ncK1abCfC90-unsplash%201.png}" />
-        </div>
-      </a>
-      <p>Marchew Berlikum</p>
-      <p><b>5,29 szt.</b></p>
-      <p>do koszyka</p>
-    </div>
-    <div class="box">
-      <a id="cztery4" href="pages/produkt.html" onclick="storeItemSelected(this.id)" >
-        <div>
-          <img th:src="@{produkty/roxana-kaboli-W0L2LbXoEQI-unsplash%201.png}" />
-        </div>
-      </a>
-      <p>Truskawka Polka</p>
-      <p><b>4,50 zł</b></p>
-      <p>do koszyka</p>
-    </div>
   </section>
 </div>
 <br>
@@ -169,7 +147,7 @@
     <div class="card-footer">
       <ul>
         <li>
-          <img th:src="@{img/RAJROŚLIN.png}" alt="Logo" width="250" height="100"  >
+          <a th:href="@{/home}"> <img th:src="@{img/RAJROŚLIN.png}" th:href="@{/home}" alt="RAJ ROŚLIN" width="250" height="100"></a>
         </li>
         <li>
           <p>
@@ -179,16 +157,16 @@
       </ul>
       <ul>
         <li class="title-list">Informacje</li>
-        <li>Strona główna</li>
-        <li>Nasiona</li>
-        <li>Sadzonki</li>
-        <li>Akcesoria</li>
-        <li>Nawozy</li>
+        <li><a href="/category">Strona główna</a></li>
+        <li><a href="/category">Nasiona</a></li>
+        <li><a href="/category">Sadzonki</a></li>
+        <li><a href="/category">Akcesoria</a></li>
+        <li><a href="/category">Nawozy</a></li>
       </ul>
       <ul>
         <li class="title-list">Moje Konto</li>
-        <li>Zaloguj</li>
-        <li>Założ konto</li>
+        <li><a href="/login">Zaloguj</a></li>
+        <li><a href="/login">Założ konto</a></li>
 
       </ul>
       <ul class="shops">

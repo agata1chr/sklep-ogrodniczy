@@ -22,7 +22,18 @@
         });
         /*]]>*/
     </script>
+
     </div>
+    <script>
+        <script>
+  var image = document.getElementById("image");
+  var productInfo = document.querySelector(".product-info");
+
+  image.addEventListener("click", function() {
+    productInfo.classList.toggle("show");
+  });
+</script>
+
 
 
 </head>
@@ -66,8 +77,26 @@
 </header>
 
 <div class="produkt">
-    <button type="button" onclick="addProductBox('1', 'Marchew Berlikum', '5,29', 'produkty/roxana-kaboli-W0L2LbXoEQI-unsplash%201.png')">Dodaj produkt</button>
+    <button type="button" onclick="addProductBox('1', 'Marchew Berlikum', 5.29, 'produkty/roxana-kaboli-W0L2LbXoEQI-unsplash%201.png')">Dodaj produkt</button>
     <section id="someElementId" class="flexbox">
+
+
+
+
+        <main>
+            <div class="panel" id="image-container">
+                <img id="image" th:src="@{img/RAJROŚLIN.png}" alt="Zdjęcie produktu">
+                <div class="product-info">
+                    <h4>Nazwa produktu</h4>
+                    <p>Cena: $10.00</p>
+                    <p>Opis produktu Lorem ipsum dolor sit amet...</p>
+                </div>
+            </div>
+        </main>
+
+
+
+
 
 
 
@@ -79,13 +108,12 @@
 <br>
 
 
-
 <header class="header">
     <footer class="footer">
         <div class="card-footer">
             <ul>
                 <li>
-                    <img th:src="@{img/RAJROŚLIN.png}" alt="Logo" width="250" height="100"  >
+                    <a th:href="@{/home}"> <img th:src="@{img/RAJROŚLIN.png}" th:href="@{/home}" alt="RAJ ROŚLIN" width="250" height="100"></a>
                 </li>
                 <li>
                     <p>
@@ -95,16 +123,16 @@
             </ul>
             <ul>
                 <li class="title-list">Informacje</li>
-                <li>Strona główna</li>
-                <li>Nasiona</li>
-                <li>Sadzonki</li>
-                <li>Akcesoria</li>
-                <li>Nawozy</li>
+                <li><a href="/category">Strona główna</a></li>
+                <li><a href="/category">Nasiona</a></li>
+                <li><a href="/category">Sadzonki</a></li>
+                <li><a href="/category">Akcesoria</a></li>
+                <li><a href="/category">Nawozy</a></li>
             </ul>
             <ul>
                 <li class="title-list">Moje Konto</li>
-                <li>Zaloguj</li>
-                <li>Założ konto</li>
+                <li><a href="/login">Zaloguj</a></li>
+                <li><a href="/login">Założ konto</a></li>
 
             </ul>
             <ul class="shops">

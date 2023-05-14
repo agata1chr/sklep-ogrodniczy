@@ -51,18 +51,43 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative; /* ustaw pozycję względem elementu nadrzędnego */
-  width: 100%;
+  position: relative;
+  width: 70%; /* Zajmuje 70% szerokości strony */
+  margin: 0 auto; /* Wyśrodkowanie na stronie */
 }
+
+#image {
+  width: 100%;
+  height: auto;
+}
+
+#image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 1mm;
+  font-size: 1.2em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 4px 8px;
+}
+#next-btn {
+ position: absolute;
+  top: 50%;
+  right: 0.5cm;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
 .RAJcontainer {
   margin: 0 auto; /* Centruje obrazek w poziomie */
   }
 
-
-#next-btn {
-  position: absolute;
-  right: 230px;
-}
 
 .hhh {
   display: flex;
@@ -198,3 +223,13 @@ ul{
     border-top: 1px solid black;
     margin: 0;
 }
+.box button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+ }

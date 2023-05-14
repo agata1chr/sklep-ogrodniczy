@@ -105,7 +105,7 @@
     Lorem ipsum <br> dolor  sit amet <br>consectetur.
   </h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Blanditiis esse <br> fugit cupiditate illo ad. Quas?
+      Zapraszamy na nasze szkolenia <br> i warszsztaty - dowiedz się, <br> jak dbać o środowisko!
     </p></div>
 </div>
 
@@ -123,7 +123,7 @@
     <div class="card-footer">
       <ul>
         <li>
-          <img th:src="@{img/RAJROŚLIN.png}" alt="Logo" width="250" height="100"  >
+          <a th:href="@{/home}"> <img th:src="@{img/RAJROŚLIN.png}" th:href="@{/home}" alt="RAJ ROŚLIN" width="250" height="100"></a>
         </li>
         <li>
           <p>
@@ -133,16 +133,16 @@
       </ul>
       <ul>
         <li class="title-list">Informacje</li>
-        <li>Strona główna</li>
-        <li>Nasiona</li>
-        <li>Sadzonki</li>
-        <li>Akcesoria</li>
-        <li>Nawozy</li>
+        <li><a href="/category">Strona główna</a></li>
+        <li><a href="/category">Nasiona</a></li>
+        <li><a href="/category">Sadzonki</a></li>
+        <li><a href="/category">Akcesoria</a></li>
+        <li><a href="/category">Nawozy</a></li>
       </ul>
       <ul>
         <li class="title-list">Moje Konto</li>
-        <li>Zaloguj</li>
-        <li>Założ konto</li>
+        <li><a href="/login">Zaloguj</a></li>
+        <li><a href="/login">Założ konto</a></li>
 
       </ul>
       <ul class="shops">

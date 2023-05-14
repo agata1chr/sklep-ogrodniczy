@@ -41,33 +41,23 @@ function addProductBoxx(id, name, price, imageUrl) {
 
   document.getElementById("someElementId").appendChild(box);
 }
+const images = [
+  {src: 'img/pierwszezdj.png', alt: 'Pierwsze zdjęcie', text: 'Wiosna w pełni! Kup róże w naszym sklepie i otrzymaj gratis zestaw nawozów do roślin, który uchroni Twoje róże przed chorobami'},
+  {src: 'img/dwa.png', alt: 'Drugie zdjęcie', text: 'Rozpocznij swoją przygodę z ogrodnictwem! Kup nasiona marchewki i otrzymaj darmową poradę ogrodniczą od naszych ekspertów'},
+  {src: 'img/trzy.png', alt: 'Trzecie zdjęcie', text: 'Posadź zdrowie! Kup nasiona marchewki w naszym sklepie z rabatem 10% dzięki kodowi MARCH10'}
+];
 
+const imageContainer = document.getElementById('image-container');
+const imageElement = document.getElementById('image');
+const imageTextElement = document.getElementById('image-text');
+const nextButton = document.getElementById('next-btn');
 
+let currentIndex = 0;
 
-
-
-
-
-  // tablica z adresami URL obrazków
-  var imageUrls = ["img/pierwszezdj.jpg", "img/logo.jpg", "img/łapki.jpg"];
-
-  // zmienna przechowująca aktualny indeks obrazka
-  var currentImageIndex = 0;
-
-  // elementy DOM
-  var image = document.getElementById("image");
-  var nextButton = document.getElementById("next-button");
-
-  // funkcja aktualizująca obrazek na podstawie wartości currentImageIndex
-  function updateImage() {
-    image.setAttribute("src", imageUrls[currentImageIndex]);
-  }
-
-  // obsługa kliknięcia na przycisk "Next"
-  nextButton.addEventListener("click", function() {
-    currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
-    updateImage();
-  });
-
-  // ustawienie początkowego obrazka
-  updateImage();
+nextButton.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  const { src, alt, text } = images[currentIndex];
+  imageElement.src = src;
+  imageElement.alt = alt;
+  imageTextElement.textContent = text;
+});

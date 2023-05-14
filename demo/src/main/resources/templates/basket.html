@@ -5,6 +5,22 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <link rel="stylesheet" th:href="@{css/basket.css}"/>
+  <script th:src="@{/js/basket.js}" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <div th:each="product : ${products}">
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        $(document).ready(function() {
+            addProductBox(
+                /*[[${product.id}]]*/,
+                /*[[${product.name}]]*/,
+                /*[[${product.description}]]*/,
+                /*[[${product.imageUrl}]]*/
+            );
+        });
+        /*]]>*/
+    </script>
+  </div>
 
 </head>
 <body id="home">
@@ -43,57 +59,20 @@
 <br>
 <br>
 <br>
+<button type="button" onclick="addProductBox('1', 'Marchew Berlikum', 5.29, 'produkty/roxana-kaboli-W0L2LbXoEQI-unsplash%201.png')">Dodaj produkt</button>
 
 
 
 <div class="container">
-  <div class="left">
+  <div id="someElementId" class="left">
     <!-- zawartość koszyka -->
-
-      <div class="cart-item">
-        <img th:src="@{produkty/zhen-hu-SauU_zQ5ZKA-unsplash%201.png}" />
-        <h4>Product Title 1</h4>
-        <p class="price">$9.99</p>
-        <div class="quantity">
-          <button class="minus">-</button>
-          <input type="text" value="1">
-          <button class="plus">+</button>
-        </div>
-        <button class="remove">&times;</button>
-      </div>
-
-      <div class="cart-item">
-        <img th:src="@{produkty/roxana-kaboli-W0L2LbXoEQI-unsplash%201.png}" />
-        <h4>Product Title 2</h4>
-        <p class="price">$14.99</p>
-        <div class="quantity">
-          <button class="minus">-</button>
-          <input type="text" value="1">
-          <button class="plus">+</button>
-        </div>
-        <button class="remove">&times;</button>
-      </div>
-
-      <div class="cart-item">
-        <img th:src="@{produkty/linh-le-Ebwp2-6BG8E-unsplash%201.png}" />
-        <h4>Product Title 3</h4>
-        <p class="price">$19.99</p>
-        <div class="quantity">
-          <button class="minus">-</button>
-          <input type="text" value="1">
-          <button class="plus">+</button>
-        </div>
-        <button class="remove">&times;</button>
-
-    </div>
-
 
   </div>
   <div class="right">
     <h2>Podsumowanie koszyka</h2>
-    <p>Wartość produktów: 100,00 zł</p>
-    <p>Dostawa: 20,00 zł</p>
-    <p>Suma: 120,00 zł</p>
+    <p>Wartość produktów: <span id="total-value">0.00</span> zł</p>
+    <p>Dostawa: 20.00 zł</p>
+    <p>Suma: <span id="total-sum">0.00</span> zł</p>
     <button href="@{/pay}">Płacę</button>
     <a th:href="@{/pay}" id="pay">Płać !!!!!!!</a>
   </div>
@@ -108,7 +87,7 @@
     <div class="card-footer">
       <ul>
         <li>
-          <img th:src="@{img/RAJROŚLIN.png}" alt="Logo" width="250" height="100"  >
+          <a th:href="@{/home}"> <img th:src="@{img/RAJROŚLIN.png}" th:href="@{/home}" alt="RAJ ROŚLIN" width="250" height="100"></a>
         </li>
         <li>
           <p>
@@ -118,16 +97,16 @@
       </ul>
       <ul>
         <li class="title-list">Informacje</li>
-        <li>Strona główna</li>
-        <li>Nasiona</li>
-        <li>Sadzonki</li>
-        <li>Akcesoria</li>
-        <li>Nawozy</li>
+        <li><a href="/category">Strona główna</a></li>
+        <li><a href="/category">Nasiona</a></li>
+        <li><a href="/category">Sadzonki</a></li>
+        <li><a href="/category">Akcesoria</a></li>
+        <li><a href="/category">Nawozy</a></li>
       </ul>
       <ul>
         <li class="title-list">Moje Konto</li>
-        <li>Zaloguj</li>
-        <li>Założ konto</li>
+        <li><a href="/login">Zaloguj</a></li>
+        <li><a href="/login">Założ konto</a></li>
 
       </ul>
       <ul class="shops">

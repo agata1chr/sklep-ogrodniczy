@@ -6,10 +6,10 @@ import lombok.Data;
 public class Product {
     private String id;
     private String name;
-    private String description;
+    private double description;
     private String imageUrl;
 
-    public Product(String id, String name, String description, String imageUrl) {
+    public Product(String id, String name, double description, String imageUrl) {
         this.id = id;
         this.name = name;
         this.description = description;
