@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/css/login.css">
+  <script th:src="@{/js/login.js}" defer></script>
+</head>
+<body id="home">
+<header class="header">
+  <div class="leftt">
+    <label for="language-select"><img th:src="@{img/img_1.png}" alt="buttonpng" width="13" height="13"></label>
+    <select id="language-select">
+      <option value="POL">POL</option>
+      <option value="ENG">ENG</option>
+    </select>
+  </div>
+
+  <div class="RAJcontainer">
+    <a th:href="@{/home}"> <img th:src="@{img/RAJROŚLIN.png}" th:href="@{/home}" alt="RAJ ROŚLIN" width="230" height="60"></a>
+  </div>
+</header>
+<br>
+<br>
+<div class="centr">
+<div class="login-panel" id="loginPanel">
+  <div class="social-login">
+    <p>Lub zaloguj się za pomocą:</p>
+    <ul>
+      <li>
+        <a href="#" class="facebook-login">
+          Kontynuuj z Facebook
+        </a>
+      </li>
+      <li>
+        <a href="#" class="apple-login">
+          Kontynuuj z Apple
+        </a>
+      </li>
+      <li>
+        <a href="#" class="google-login black-text">
+          Kontynuuj z Google
+        </a>
+      </li>
+    </ul>
+  </div>
+  <h2>Zaloguj się</h2>
+  <form class="login-form" >
+    <label for="email">Adres e-mail lub nazwa użytkownika</label>
+    <input type="email" placeholder="E-mail" />
+    <label for="password">Hasło </label>
+    <input type="password" placeholder="Hasło" />
+
+  </form>
+  <button class="lol" type="submit">Zaloguj</button>
+  <br>
+  <button class="lol" type="submit"onclick="changeForm()">ZAREJESTRUJ SIĘ DO RAJ ROŚLIN</button>
+</div>
+
+
+
+  <div class="login-panel" id="registerPanel" style="display:none;">
+    <div class="social-login">
+      <p>Lub zaloguj się za pomocą:</p>
+      <ul>
+        <li>
+          <a href="#" class="facebook-login">
+            Kontynuuj z Facebook
+          </a>
+        </li>
+        <li>
+          <a href="#" class="apple-login">
+            Kontynuuj z Apple
+          </a>
+        </li>
+        <li>
+          <a href="#" class="google-login black-text">
+            Kontynuuj z Google
+          </a>
+        </li>
+      </ul>
+    </div>
+    <h2>Załóż konto </h2>
+    <form class="login-form">
+      <label for="email">Adres e-mail lub nazwa użytkownika</label>
+      <input type="email" placeholder="E-mail" />
+      <label for="nazwa">Nazwa użytkownika</label>
+      <input type="nazwa" placeholder="nazwa" />
+      <label for="password">Hasło </label>
+      <input type="password" placeholder="Hasło" />
+
+    </form>
+    <button class="lol" type="submit">Załóż konto</button>
+    <br>
+    <button class="lol" type="submit" onclick="changeForm()">MASZ KONTO SIĘ DO RAJ ROŚLIN?</button>
+  </div>
+
+
+</div>
+<br>
+<br>
+<div class="container2">
+  <div class="box2"><img th:src="@{img/łapki.png}" alt="Image article"></div>
+  <div class="box3"><h2>
+    Lorem ipsum <br> dolor  sit amet <br>consectetur.
+  </h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Blanditiis esse <br> fugit cupiditate illo ad. Quas?
+    </p></div>
+</div>
+
+
+
+
+
+
+</body>
+
+<br>
+<br>
+<header class="header">
+  <footer class="footer">
+    <div class="card-footer">
+      <ul>
+        <li>
+          <img th:src="@{img/RAJROŚLIN.png}" alt="Logo" width="250" height="100"  >
+        </li>
+        <li>
+          <p>
+            O nas <br>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li class="title-list">Informacje</li>
+        <li>Strona główna</li>
+        <li>Nasiona</li>
+        <li>Sadzonki</li>
+        <li>Akcesoria</li>
+        <li>Nawozy</li>
+      </ul>
+      <ul>
+        <li class="title-list">Moje Konto</li>
+        <li>Zaloguj</li>
+        <li>Założ konto</li>
+
+      </ul>
+      <ul class="shops">
+        <li class="title-list ">Kontakt</li>
+        <li>hello@rajroslin.pl</li>
+        <li>Ul.pokoju243  <br>
+          31-567 Kraków</li>
+        <li>+48 22 567 88 76 39</li>
+        <li>Odwiedź nas:</li>
+      </ul>
+    </div>
+
+    <p class="by-name">
+      &copy; Prawa autorskie 2023 Raj Natury Wszelkie prawa zastrzeżone.
+    </p>
+  </footer>
+</header>
+</html>

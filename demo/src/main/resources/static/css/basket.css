@@ -1,0 +1,277 @@
+body,
+ul,
+li,
+p {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 1.2rem;
+  font-family: Arial;
+}
+body {
+  background-color: #E4EBE4;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 1.2rem;
+  font-family: Arial;
+}
+.containerP {
+	display: flex;
+}
+.side-container{
+    width: 100%;
+    transform: translateX(0);
+}
+.left-boxP {
+	flex: 2;
+	background-color: #A9A9A9;
+	height: 200px;
+	width: 60%;
+}
+
+.right-boxP {
+	flex: 1;
+	background-color: #A9A9A9;
+	height: 200px;
+	width: 60%;
+}
+.header {
+  background: #E4EBE4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.leftt {
+   display: flex;
+   flex-wrap: nowrap; /* zapobiega przewijaniu w poziomie */
+   justify-content: center; /* wyśrodkowanie w poziomie */
+   align-items: center;
+
+}
+
+.menu {
+  display: flex;
+  flex-wrap: nowrap; /* zapobiega przewijaniu w poziomie */
+  justify-content: center; /* wyśrodkowanie w poziomie */
+  align-items: center;
+  margin-top: 20px; /* odstęp od zdjęcia */
+}
+
+.menu li + li {
+  margin-left: 10px; /* dodaj przerwę po lewej stronie każdego przycisku poza pierwszym */
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* ustaw pozycję względem elementu nadrzędnego */
+  width: 100%;
+}
+.RAJcontainer {
+  margin: 0 auto; /* Centruje obrazek w poziomie */
+  }
+
+      .container {
+    transform: translateX(4em);
+    margin: 0 5em 0 7em;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: #E4EBE4;
+      }
+      .left {
+        width: 70%;
+        background-color: #dcdcdc;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .right {
+        width: 30%;
+        background-color: #dcdcdc;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-left: 10px;
+      }
+      .right h2 {
+        font-size: 24px;
+        margin-top: 0;
+      }
+      .right p {
+        margin: 5px 0;
+      }
+      .right button {
+        display: block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        background-color: #4caf50;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+      }
+.cart-panel {
+  float: left;
+  width: 70%;
+  padding: 20px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h3 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.product-info p {
+  margin: 0 0 10px 0;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.quantity button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #ddd;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.quantity input {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  border: none;
+  background-color: #eee;
+  color: #333;
+  font-size: 16px;
+}
+
+.remove {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #f00;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  margin: 0 auto;
+  background: #a3a2a2;
+}
+
+.cart-item img {
+  width: 150px;
+  height: 150px;
+  margin-right: 1rem;
+}
+
+.cart-item h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.cart-item p.price {
+  margin: 0 0 0 auto;
+  font-size: 1.2rem;
+}
+
+table {
+  margin-left: auto;
+}
+
+.qty-btn {
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.qty-btn.plus {
+  margin-left: 0.5rem;
+}
+
+.qty-btn.minus:disabled,
+.qty-btn.plus:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.qty {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.footer{
+
+    width: 80%;
+    margin: 5em auto 0;
+}
+
+
+.card-footer{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ul{
+    padding: 0;
+}
+.card-footer ul li{
+    margin: 0.5em;
+    color: #6E6E6E;
+    list-style: none;
+}
+.card-footer ul li.title-list{
+    text-transform: uppercase;
+    color: black;
+    font-weight: 700;
+}
+
+.by-name{
+    padding:1em 0 2em;
+    border-top: 1px solid black;
+    margin: 0;
+}

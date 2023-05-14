@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{css/first.css}"/>
+    <script th:src="@{/js/home.js}" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <div th:each="product : ${products}">
+        <script th:inline="javascript">
+        /*<![CDATA[*/
+        $(document).ready(function() {
+            addProductBoxx(
+                /*[[${product.id}]]*/,
+                /*[[${product.name}]]*/,
+                /*[[${product.description}]]*/,
+                /*[[${product.imageUrl}]]*/
+            );
+        });
+        /*]]>*/
+    </script>
+    </div>
+
+
+</head>
+<body id="home">
+<header class="header">
+    <div class="leftt">
+        <label for="language-select"><img th:src="@{img/img_1.png}" alt="buttonpng" width="13" height="13"></label>
+        <select id="language-select">
+            <option value="POL">POL</option>
+            <option value="ENG">ENG</option>
+        </select>
+    </div><div>
+    <form class="search-form">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><img th:src="@{img/img.png}" alt="buttonpng" width="13" height="13"></button>
+    </form>
+</div>
+
+    <div class="RAJ container">
+
+        <a th:href="@{/home}"> <img th:src="@{img/RAJROŚLIN.png}" th:href="@{/home}" alt="RAJ ROŚLIN" width="230" height="60"></a>
+
+
+        <nav>
+            <ul class="menu">
+                <li><a class="menubutton" th:href="@{/category}">Nasiona</a></li>
+                <li><a class="menubutton" th:href="@{/category}">Sadzonki</a></li>
+                <li><a class="menubutton" th:href="@{/category}">Akcesoria</a></li>
+                <li><a class="menubutton" th:href="@{/category}">Nawozy</a></li>
+                <li><a class="menubutton" th:href="@{/category}">O nas</a></li>
+            </ul>
+        </nav>
+    </div>
+    <a th:href="@{/login}" id="login">Zaloguj się!</a>
+    <div class="log">
+
+        <a th:href="@{/basket}"> <img th:src="@{img/wozek.png}" th:href="@{/basket}" alt="buttonpng" width="15" height="15"></a>
+        <a th:href="@{/basket}">0,00zł</a>
+    </div>
+
+</header>
+
+<div class="produkt">
+    <button type="button" onclick="addProductBox('1', 'Marchew Berlikum', '5,29', 'produkty/roxana-kaboli-W0L2LbXoEQI-unsplash%201.png')">Dodaj produkt</button>
+    <section id="someElementId" class="flexbox">
+
+
+
+
+
+
+    </section>
+</div>
+<br>
+
+
+
+<header class="header">
+    <footer class="footer">
+        <div class="card-footer">
+            <ul>
+                <li>
+                    <img th:src="@{img/RAJROŚLIN.png}" alt="Logo" width="250" height="100"  >
+                </li>
+                <li>
+                    <p>
+                        O nas <br>
+                    </p>
+                </li>
+            </ul>
+            <ul>
+                <li class="title-list">Informacje</li>
+                <li>Strona główna</li>
+                <li>Nasiona</li>
+                <li>Sadzonki</li>
+                <li>Akcesoria</li>
+                <li>Nawozy</li>
+            </ul>
+            <ul>
+                <li class="title-list">Moje Konto</li>
+                <li>Zaloguj</li>
+                <li>Założ konto</li>
+
+            </ul>
+            <ul class="shops">
+                <li class="title-list ">Kontakt</li>
+                <li>hello@rajroslin.pl</li>
+                <li>Ul.pokoju243  <br>
+                    31-567 Kraków</li>
+                <li>+48 22 567 88 76 39</li>
+                <li>Odwiedź nas:</li>
+            </ul>
+        </div>
+
+        <p class="by-name">
+            &copy; Prawa autorskie 2023 Raj Natury Wszelkie prawa zastrzeżone.
+        </p>
+    </footer>
+</header>
+
+</body>
+</html>
