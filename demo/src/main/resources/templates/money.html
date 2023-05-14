@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <link rel="stylesheet" th:href="@{css/basket.css}"/>
+  <link rel="stylesheet" th:href="@{css/pay.css}"/>
 
 </head>
 <body id="home">
@@ -22,7 +22,6 @@
   </div>
 </header>
 
-
 <br>
 <br>
 <br>
@@ -31,7 +30,7 @@
     <p><br></p>
     <p>Twój koszyk</p>
   </div>
-  <div style="background-color: white; width:200px; height:10px; border-radius: 10px; display:flex; flex-direction: column-reverse;">
+  <div style="background-color: #35A194; width:200px; height:10px; border-radius: 10px; display:flex; flex-direction: column-reverse;">
     <p><br></p>
     <p>Dostawa i płatność</p>
   </div>
@@ -44,63 +43,52 @@
 <br>
 <br>
 
-
-
 <div class="container">
   <div class="left">
-    <!-- zawartość koszyka -->
+    <!-- zawartość koszyka-------------------------------------- -->
 
-      <div class="cart-item">
-        <img th:src="@{produkty/zhen-hu-SauU_zQ5ZKA-unsplash%201.png}" />
-        <h4>Product Title 1</h4>
-        <p class="price">$9.99</p>
-        <div class="quantity">
-          <button class="minus">-</button>
-          <input type="text" value="1">
-          <button class="plus">+</button>
-        </div>
-        <button class="remove">&times;</button>
-      </div>
-
-      <div class="cart-item">
-        <img th:src="@{produkty/roxana-kaboli-W0L2LbXoEQI-unsplash%201.png}" />
-        <h4>Product Title 2</h4>
-        <p class="price">$14.99</p>
-        <div class="quantity">
-          <button class="minus">-</button>
-          <input type="text" value="1">
-          <button class="plus">+</button>
-        </div>
-        <button class="remove">&times;</button>
-      </div>
-
-      <div class="cart-item">
-        <img th:src="@{produkty/linh-le-Ebwp2-6BG8E-unsplash%201.png}" />
-        <h4>Product Title 3</h4>
-        <p class="price">$19.99</p>
-        <div class="quantity">
-          <button class="minus">-</button>
-          <input type="text" value="1">
-          <button class="plus">+</button>
-        </div>
-        <button class="remove">&times;</button>
-
-    </div>
+    <form method="POST" th:action="@{/money}" th:object="${order}">
 
 
+      <h3>Here's how I'll pay...</h3>
+      <label for="ccNumber">Credit Card #: </label>
+      <input type="text" th:field="*{ccNumber}"/>
+      <span class="validationError"
+            th:if="${#fields.hasErrors('ccNumber')}"
+            th:errors="*{ccNumber}">CC Num Error</span>
+      <br/>
+
+      <label for="ccExpiration">Expiration: </label>
+      <input type="text" th:field="*{ccExpiration}"/>
+      <span class="validationError"
+            th:if="${#fields.hasErrors('ccExpiration')}"
+            th:errors="*{ccExpiration}">CC Num Error</span>
+      <br/>
+
+      <label for="ccCVV">CVV: </label>
+      <input type="text" th:field="*{ccCVV}"/>
+      <span class="validationError"
+            th:if="${#fields.hasErrors('ccCVV')}"
+            th:errors="*{ccCVV}">CC Num Error</span>
+      <br/>
+      <input type="submit" value="Submit order"/>
+    </form>
+    <!-- zawartość koszyka  --------------------------------------->
   </div>
   <div class="right">
-    <h2>Podsumowanie koszyka</h2>
+    <h2>Podsumowanie </h2>
     <p>Wartość produktów: 100,00 zł</p>
-    <p>Dostawa: 20,00 zł</p>
-    <p>Suma: 120,00 zł</p>
-    <button href="@{/pay}">Płacę</button>
-    <a th:href="@{/pay}" id="pay">Płać !!!!!!!</a>
+    <p>Razem: 120,00 zł</p>
+    <button href="@{/end}">KUPUJĘ I PŁACĘ</button>
+    <a th:href="@{/end}" id="pay">Płać !!!!!!!</a>
   </div>
 </div>
 
 <br>
 <br>
+<br>
+<br>
+
 <br>
 <br>
 <header class="header">
@@ -148,4 +136,3 @@
 
 </body>
 </html>
-
